@@ -1,0 +1,38 @@
+﻿<Window x:Class="WpfProjetFinal.Views.WindowProfile"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfProjetFinal.Views" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="WindowProfile" Height="450" Width="800" Background="#FF423F3F">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="270"/>
+            <ColumnDefinition Width="*"/>
+            <!--<ColumnDefinition Width="270"/>-->
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="1" Background="#FFE4E4E4" HorizontalAlignment="Right" Width="530"/>
+        <StackPanel Background="#FF586158">
+            <Button HorizontalAlignment="Right" Margin="10">
+                <!--<materialDesign:PackIcon Kind="Close"/>-->
+            </Button>
+
+            <Border Width="150" Height="150" CornerRadius="80" BorderThickness="1" BorderBrush="Gray">
+                <Border.Background>
+                    <ImageBrush ImageSource="C:\Users\Precision 5110\source\repos\WcfFirstSoapSrevice\WpfProjetFinal\Images\authLogo.png"/>
+                </Border.Background>
+            </Border>
+
+            <TextBlock Text="Omar WPFTest" HorizontalAlignment="Center" Margin="0 10 0 0" Foreground="#FFF7F5F5" FontSize="18" FontWeight="Bold"/>
+            <TextBlock Text="Email:" FontSize="16" HorizontalAlignment="Center" Opacity="0.8" Foreground="#FFF7F5F5"/>
+            <TextBlock Text="Statut : Chef/Non" FontSize="12" Foreground="#FFF7F5F5" HorizontalAlignment="Center" Opacity="0.8"/>
+            <Button Width="60" Height="24" Margin="-160 40 0 0" HorizontalAlignment="Center" Content="Modifier" Background="#FFECCE05"/>
+            <Button Width="60" Height="24" Margin="160 -30 0 0" HorizontalAlignment="Center" Content="Supprimer" Background="#FFF15308"/>
+
+        </StackPanel>
+
+    </Grid>
+</Window>

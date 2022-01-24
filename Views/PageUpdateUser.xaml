@@ -1,0 +1,42 @@
+﻿<Page x:Class="WpfProjetFinal.Views.PageUpdateUser"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfProjetFinal.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageUpdateUser">
+
+    <Grid Background="#FF0F454C">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="219*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="568*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock HorizontalAlignment="Left" Margin="55,30,0,0" TextWrapping="Wrap" Text="Nom" VerticalAlignment="Top" Height="30" Grid.ColumnSpan="3" Foreground="Ivory"/>
+        <TextBox HorizontalAlignment="Left" Margin="49,30,0,0" TextWrapping="Wrap" Text="{Binding Path=UserSellectionedVM.Nom, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Grid.Column="2" Height="23" Width="194"/>
+        <!--<TextBox HorizontalAlignment="Left" Margin="49,30,0,0" TextWrapping="Wrap" Text="{Binding ElementName=LstUsers, Path=selectedItem.Nom, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Grid.Column="2" Height="23" Width="194"/>-->
+        <TextBlock HorizontalAlignment="Left" Margin="55,60,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" RenderTransformOrigin="-0.185,0.429" Height="24" Grid.ColumnSpan="3" Foreground="Ivory"/>
+        <TextBox HorizontalAlignment="Left" Margin="49,60,0,0" TextWrapping="Wrap" Text="{Binding Path=UserSellectionedVM.Email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Grid.Column="2" Height="23" Width="194" />
+        <TextBlock HorizontalAlignment="Left" Margin="55,90,0,0" TextWrapping="Wrap" Text="Mot de passe" VerticalAlignment="Top" RenderTransformOrigin="-0.185,0.429" Height="48" Grid.ColumnSpan="3" Foreground="Ivory"/>
+        <!--<TextBox HorizontalAlignment="Left" Margin="49,90,0,0" TextWrapping="Wrap" Text="{Binding Path=UserVM.Password}" VerticalAlignment="Top" Grid.Column="2" Height="23"/>-->
+        <PasswordBox x:Name="pswbxPassword" Grid.Column="2" HorizontalAlignment="Left" Margin="50,96,0,0" VerticalAlignment="Top" Width="194" />
+        <CheckBox Grid.Column="2" Content="Etes vous un professionnel (chef)" IsChecked="{Binding Path=UserSellectionedVM.IsProfessional, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsThreeState="False" HorizontalAlignment="Left" Margin="50,130,0,0" VerticalAlignment="Top" Foreground="Ivory"/>
+        <TextBlock HorizontalAlignment="Left" Margin="55,180,0,0" TextWrapping="Wrap" Text="Image" VerticalAlignment="Top" RenderTransformOrigin="-0.185,0.429" Height="24" Grid.ColumnSpan="3" Foreground="Ivory"/>
+        <Image Name="imgBox" Grid.Column="2" HorizontalAlignment="Left" Height="100" Margin="49,172,0,0" VerticalAlignment="Top" Width="100">
+            <Image.Source>
+                <Binding Path="UserSellectionedVM.Picture">
+                    <!--Source="{Binding Path=UserVM.Picture }"-->
+                    <Binding.TargetNullValue>
+                        <ImageSource>/Images/logo-avatar.jpg</ImageSource>
+                    </Binding.TargetNullValue>
+                </Binding>
+            </Image.Source>
+        </Image>
+        <Button Grid.Column="2" Content="Valider la modification" HorizontalAlignment="Left" Margin="284,304,0,0" VerticalAlignment="Top" Width="142" Background="#FFD2E61C" Height="27"/>
+        <Button Grid.Column="2" Content="Select Picture" HorizontalAlignment="Left" Margin="167,228,0,0" VerticalAlignment="Top" Width="84" />
+        <TextBox Name="tbxImg" Grid.Column="2" HorizontalAlignment="Left" Margin="164,173,0,0" TextWrapping="Wrap" Text="" 
+                             VerticalAlignment="Top" Width="338" RenderTransformOrigin="0.5,0.5"/>
+    </Grid>
+</Page>

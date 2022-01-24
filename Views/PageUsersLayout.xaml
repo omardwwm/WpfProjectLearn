@@ -1,0 +1,21 @@
+﻿<Page x:Class="WpfProjetFinal.Views.PageUsersLayout"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfProjetFinal.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageUsersLayout">
+
+    <Grid>
+        <StackPanel Margin="15,143,0,105" Background="#FF35503B" HorizontalAlignment="Left" Width="139" >
+            <Button Content="Inscription" Height="40" Margin="5" Click="PageInscription_Click"  />
+            <Button Content="Liste des Users" Height="40" Margin="5" Click="PageListUsers_Click" />
+            <Button Content="Modifier Profil" Height="40" Margin="5" Click="GoToProfilPage_Click" />
+            <Button Content="Rechercher" Height="40" Margin="5" />
+            <!--<Button Content="Administration" Height="40" Margin="5"/>-->
+        </StackPanel>
+        <Frame x:Name="frmPages" NavigationUIVisibility="Hidden" Content="Frame" Margin="169,61,8,23" Background="#FF303180"/>
+    </Grid>
+</Page>
